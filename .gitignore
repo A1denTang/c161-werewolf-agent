@@ -1,0 +1,20 @@
+# Secrets: the Official Agent Key lives only in .env
+.env
+.env.*
+!.env.example
+
+# Local environment, model and runtime (Setup.ps1 recreates them)
+.venv/
+.runtime/
+*.gguf
+*.zip
+
+# Run outputs
+logs/
+results/
+*.log
+
+# Python build and test caches
+__pycache__/
+.pytest_cache/
+*.egg-info/

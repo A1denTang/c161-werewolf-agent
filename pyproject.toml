@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "c161-werewolf"
+version = "0.1.0"
+description = "A seat-local LLM agent for seven-player AltruAgent Werewolf"
+requires-python = ">=3.11"
+dependencies = [
+    "altruagent-starter @ git+https://github.com/UCLA-Trustworthy-AI-Lab/altruagent-starter.git@2d7a11b04e0d4b9a60ce4b3aff0ad7dc45c1a2a3",
+    "python-dotenv>=1,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+include = ["werewolf_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
